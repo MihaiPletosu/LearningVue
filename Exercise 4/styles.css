@@ -1,0 +1,121 @@
+#effect {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.highlight {
+  background-color: red;
+  width: 200px !important;
+}
+
+.shrink {
+  background-color: gray;
+  width: 50px !important;
+}
+
+.font-color-red{
+  color: red;
+}
+
+.font-color-green{
+  color: green;
+}
+
+.font-color-yellow{
+  color: yellow;
+}
+
+.font-color-blue{
+  color: blue;
+}
+
+.background-red{
+  background-color: red;
+}
+
+.background-green{
+  background-color: green;
+}
+
+.background-yellow{
+  background-color: yellow;
+}
+
+.background-blue{
+  background-color: blue;
+}
+
+.red-square-no-bg{
+  width: 200px;
+  height: 200px;
+  border:1px solid red;
+}
+
+.green-square-no-bg{
+  width: 200px;
+  height: 200px;
+  border:1px solid green;
+}
+
+.red-square{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+.green-square{
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}
+
+.red-rectangle-no-bg{
+  width:200px;
+  height: 100px;
+  border:1px solid red;
+}
+
+.green-rectangle-no-bg{
+  width: 200px;
+  height: 100px;
+  border:1px solid green;
+}
+
+.red-rectangle{
+  width: 200px;
+  height: 100px;
+  background-color: red;
+}
+
+.green-rectangle{
+  width: 200px;
+  height: 100px;
+  background-color: green;
+}
+
+.font-size-20{
+  font-size: 20px;
+}
+
+.font-size-25{
+  font-size: 25px;
+}
+
+.square{
+  width: 200px;
+  height: 200px;
+  border: 1px solid grey;
+}
+
+.rectangle{
+  width: 200px;
+  height: 100px;
+  border: 1px solid grey;
+}
+
+.progressBar{
+  width: 10px;
+  height: 10px;
+  background-color: green;
+}

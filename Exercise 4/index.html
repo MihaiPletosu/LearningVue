@@ -1,0 +1,80 @@
+<html>
+
+<head>
+  <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <div id="exercise">
+    <!-- 1) Start the Effect with the Button. The Effect should alternate the "highlight" or "shrink" 
+          class on each new setInterval tick (attach respective class to the div with id "effect" below) -->
+    <div>
+      <p>Ex.1: </p>
+      <button @click="startEffect">Start Effect</button>
+      <div id="effect" :class="alternatedClass"></div>
+    </div>
+    <hr>
+
+    <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
+    <p>Ex.2: </p>
+    <div :class="['background-blue', 'font-color-red', 'font-size-20']">I got no class :(</div>
+    <hr>
+
+    <!-- 3) Let the user enter a class (create some example classes) and attach it -->
+    <div>
+      <p>Ex.3: Available classes:</p>
+      <ul>
+        <li>square</li>
+        <li>rectangle</li>
+        <li>red-square</li>
+        <li>green-square</li>
+        <li>red-square-no-bg</li>
+        <li>green-square-no-bg</li>
+        <li>red-rectangle</li>
+        <li>green-rectangle</li>
+        <li>red-rectangle-no-bg</li>
+        <li>green-rectangle-no-bg</li>
+      </ul>
+      <input type="text" v-model="inputClass">
+      <div :class="inputClass"></div>
+    </div>
+    <hr>
+
+    <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
+    <div>
+      <p>Ex.4: Use the list from above for class names.</p>
+      <span>Input a class from the list: </span>
+      <input type="text" v-model="userDefinedClass">
+      <br/>
+      <span>Input true/false to enable the attached class: </span>
+      <input type="text" v-model="userEnablingClass">
+      <div :class="[userDefinedClass ,{'red-rectangle': userEnablingClass}]"></div>
+    </div>
+    <hr>
+
+    <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
+    <div>
+        <p>Ex.5: </p>
+      <span>Input width of rectangle:</span>
+      <input type="text" v-model="width">
+      <span>Input height of rectangle:</span>
+      <input type="text" v-model="height">
+      <span>Input color of rectangle:</span>
+      <input type="text" v-model="backgroundColor">
+      <div class="rectangle" :style="userStyle"></div>
+    </div>
+    <hr>
+
+    <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
+    <div>
+        <p>Ex.6: </p>
+      <button @click="startProgressBar">Start Progress</button>
+      <button @click="resetProgressBar">Reset</button>
+      <div class="progressBar" :style="{width: progressBarWidth}"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
