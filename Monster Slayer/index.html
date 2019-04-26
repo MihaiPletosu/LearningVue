@@ -35,9 +35,9 @@
         </section>
         <section class="row controls" v-if="!newGame">
             <div class="small-12 columns">
-                <button id="attack" @click="calculateDamage">ATTACK</button>
-                <button id="special-attack" @click="calculateSpecialDamage">SPECIAL ATTACK</button>
-                <button id="heal" @click="healPlayer">HEAL</button>
+                <button id="attack" @click="calculateDamage(), checkGameState">ATTACK</button>
+                <button id="special-attack" @click="calculateSpecialDamage(), checkGameState">SPECIAL ATTACK</button>
+                <button id="heal" @click="healPlayer(), checkGameState">HEAL</button>
                 <button id="give-up" @click="newGame = true">GIVE UP</button>
             </div>
         </section>

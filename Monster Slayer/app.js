@@ -6,6 +6,23 @@ new Vue({
         monsterHealth: 100,
         events: [],
     },
+    computed: {
+        checkGameState: function(){
+            if(this.playerHealth <= 0){
+                alert("Game Over!");
+                this.playerHealth = 100;
+                this.monsterHealth = 100;
+                this.newGame = false;
+                this.events = [];
+            }else if(this.monsterHealth <= 0){
+                alert("You Win!");
+                this.playerHealth = 100;
+                this.monsterHealth = 100;
+                this.newGame = false;
+                this.events = [];
+            }
+        }
+    },
     methods: {
         healthBarStyle: function (healthValue) {
             return {
@@ -79,9 +96,6 @@ new Vue({
                 "MonsterDamage": monsterDamage
             });
             this.events.reverse();
-        },
-        loseGame: function(){
-
         }
     },
     watch: {
